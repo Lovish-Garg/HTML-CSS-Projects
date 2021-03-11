@@ -1,0 +1,73 @@
+*
+{
+	padding: 0;
+	margin: 0;
+}
+
+.container
+{
+	width: 50vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;/*This will make the contaienr center-align*/
+	overflow: hidden;
+}
+
+.wrap-width
+{
+	width: 100%;
+	height: 70%;
+	position: relative;
+}
+
+.container img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.overlay
+{
+	top: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	overflow: hidden;/*After this the text within the .overlay willnot be visible if height  is 0*/
+	height: 0;
+	
+	background-color: #e3e3e3;
+	
+	transition: 1s ease;
+}
+
+.text
+{
+	color: #333;
+	
+	position: absolute;
+	text-align: center;
+	
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	font-size: 2rem;
+	font-weight: 700;
+
+	font-family: sans-serif;
+}
+
+.text span
+{
+	display: block;
+	text-indent: 3rem;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-decoration: underline;
+}
+
+.wrap-width:hover .overlay
+{
+	height: 100%;
+}
