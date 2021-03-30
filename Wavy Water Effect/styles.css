@@ -1,0 +1,46 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #111;
+}
+
+.content h2
+{
+	position: absolute;
+	transform: translate(-50%, -50%);
+	font-size: 10rem;
+}
+
+.content h2:nth-child(1)
+{
+	color: #111;
+	text-shadow: -1px 0 #03a9f4, 0 1px #03a9f4, 1px 0 #03a9f4, 0 -1px #03a9f4;
+}
+
+.content h2:nth-child(2)
+{
+	color: #03a9f4;
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate
+{
+	0%, 100%
+	{
+		clip-path: polygon(0 32%, 8% 47%, 14% 53%, 26% 61%, 40% 59%, 46% 49%, 57% 42%, 69% 48%, 82% 56%, 91% 64%, 100% 67%, 100% 100%, 0 100%);
+	}
+	50%
+	{
+		clip-path: polygon(0 63%, 10% 70%, 15% 64%, 22% 54%, 38% 49%, 46% 43%, 56% 51%, 67% 55%, 76% 45%, 89% 34%, 100% 24%, 100% 100%, 0 100%);
+	}
+}
