@@ -8,7 +8,7 @@
 
 section::before
 {
-	background: linear-gradient(180deg, #0081ff, #ff137d), url('/C:/Users/lovis/Pictures/Images/boy.jpg') fixed;
+	background: linear-gradient(180deg, #0081ff, #ff137d), url('boy.jpg') fixed;
 	background-blend-mode: screen;
 	background-size: cover;
 	position: absolute;
