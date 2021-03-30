@@ -1,0 +1,102 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+}
+
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #111;
+}
+
+.container
+{
+	position: relative;
+	min-width: 800px;
+	min-height: 500px;
+	height: 100%;
+	width: auto;
+	background: #222;
+}
+
+.container div[class ^= 'clip']
+{
+	transition: all .5s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.container .clip1
+{
+	background: url('Images/background.jpg');
+	background-size: cover;
+
+
+	-ms-clip-path: polygon(0px 0px, 0px 0px, 51.50% 0px, 0px 100%);
+	-moz-clip-path: polygon(0px 0px, 0px 0px, 51.50% 0px, 0px 100%);
+	-webkit-clip-path: polygon(0px 0px, 0px 0px, 51.50% 0px, 0px 100%);
+	clip-path: polygon(0px 0px, 0px 0px, 51.50% 0px, 0px 100%);
+}
+.container .clip2
+{
+	background: url('Images/car1.jpg');
+	background-size: cover;
+	-webkit-clip-path: polygon(51.37% 0px, 100% 0%, 44% 100%, 0% 100%);
+	-moz-clip-path: polygon(51.37% 0px, 100% 0%, 44% 100%, 0% 100%);
+	-ms-clip-path: polygon(51.37% 0px, 100% 0%, 44% 100%, 0% 100%);
+	clip-path: polygon(51.37% 0px, 100% 0%, 44% 100%, 0% 100%);
+}
+
+.container .clip3
+{
+	background: url('Images/car2.jpg');
+	background-size: cover;
+
+	-webkit-clip-path: polygon(100% 0px, 100.00% 0.00%, 44% 100%, 100% 100%);
+	-moz-clip-path: polygon(100% 0px, 100.00% 0.00%, 44% 100%, 100% 100%);
+	-ms-clip-path: polygon(100% 0px, 100.00% 0.00%, 44% 100%, 100% 100%);
+	clip-path: polygon(100% 0px, 100.00% 0.00%, 44% 100%, 100% 100%);
+}
+
+.container:hover div[class ^= 'clip']
+{
+	-moz-clip-path: polygon(100% 0, 100% 0, 100% 90%, 100% 100%);
+	-webkit-clip-path: polygon(100% 0, 100% 0, 100% 90%, 100% 100%);
+	clip-path: polygon(100% 0, 100% 0, 100% 90%, 100% 100%);
+}
+
+.container div[class ^= 'clip']:hover
+{
+	-webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100%	 100%);
+	-moz-clip-path: polygon(0 100%, 0 0, 100% 0, 100%	 100%);
+	-ms-clip-path: polygon(0 100%, 0 0, 100% 0, 100%	 100%);
+	clip-path: polygon(0 100%, 0 0, 100% 0, 100%	 100%);
+}
+
+.container div[class ^= 'clip'] .content
+{
+	position: absolute;
+	bottom: -200px;
+	width: 70%;
+	left: 0;
+	padding: 1.3rem;
+	background: rgba(0, 0, 0, .5);
+	color: #fff;
+	transition: all .5s;
+	opacity: 0;
+}
+
+.container div[class ^= 'clip']:hover .content
+{
+	opacity: 1;
+	bottom: 0;
+}
